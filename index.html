@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea 6</title>
+
+    <!--CSS-->
+    <link rel="stylesheet" href="BootsTrap/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <!--JavaScript-->
+    <script src="javascrip.js"></script>
+    <script src="BootsTrap/bootstrap.bundle.min.js"></script>
+    <!--Link Google Font-->
+    <link href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz:200,300,400,700" rel="stylesheet">
+</head>
+<body>
+    <header class="row">
+        <h2 class="text-center">Tarea de JavaScript</h2>
+    </header>
+    <br>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 col-md-4 col-lg-4" action="">
+            <h5>Control de flujo y manejo de errores </h5>
+            <div class="mb-3">
+                <label for="txtIf" class="form-label">Texto</label>
+                <input type="text" class="form-control" id="txtIf">
+            </div>
+
+            <button type="button" class="btn btn-primary mb-3"
+                onclick="condicionales(document.getElementById('txtIf').value)">if...else</button>
+
+            <div class="mb-3">
+                <label for="cbxAnimales" class="form-label">ComboBox de Animales</label>
+                <select class="form-select" id="cbxAnimales">
+                    <option></option>
+                    <option>Perro</option>
+                    <option>Gato</option>
+                    <option>Vaca</option>
+                    <option>Mono</option>
+                </select>
+            </div>
+            <button type="button" class="btn btn-primary mb-3"
+                onclick="_switch(document.getElementById('cbxAnimales').value)">switch</button>
+            <button type="button" class="btn btn-primary mb-3"
+                onclick="manejarExcepcion(document.getElementById('txtIf').value)">try/catch/throw</button>
+            <button type="button" class="btn btn-primary mb-3" onclick="objetoError(new TypeError())">Objetos
+                Error</button>
+            
+            <br><br>
+                <h5>Bucles e iteración</h5>
+            <div class>
+                <button id="_for" type="button" class="btn btn-primary mb-3"
+                    onclick="bucles(document.getElementById('_for').innerHTML)">for</button>
+                <button id="_while" type="button" class="btn btn-primary mb-3"
+                    onclick="bucles(document.getElementById('_while').innerHTML)">while</button>
+                <button id="_doWhile" type="button" class="btn btn-primary mb-3"
+                    onclick="bucles(document.getElementById('_doWhile').innerHTML)">do While</button>
+            </div>
+
+            <br><br>
+                <h5>Operadores</h5>
+                <div class="mb-3">
+                    <label for="txtNum1" class="form-label">Numero 1</label>
+                    <input type="text" class="form-control" id="txtNum1">
+                </div>
+
+                <div class="mb-3">
+                    <label for="txtNum2" class="form-label">Numero 2</label>
+                    <input type="text" class="form-control" id="txtNum2">
+                </div>
+
+                <div class="mb-3">
+                    <button id="btnSuma" type="button" class="btn btn-primary mb-3"
+                        onclick="operar(document.getElementById('txtNum1').value, document.getElementById('txtNum2').value, document.getElementById('btnSuma').innerHTML)">Sumar</button>
+                    <button id="btnResta" type="button" class="btn btn-primary mb-3"
+                        onclick="operar(document.getElementById('txtNum1').value, document.getElementById('txtNum2').value, document.getElementById('btnResta').innerHTML)">Restar</button>
+                    <button id="btnMultiplicacion" type="button" class="btn btn-primary mb-3"
+                        onclick="operar(document.getElementById('txtNum1').value, document.getElementById('txtNum2').value, document.getElementById('btnMultiplicacion').innerHTML)">Multiplicar</button>
+                    <button id="btnDivision" type="button" class="btn btn-primary mb-3"
+                        onclick="operar(document.getElementById('txtNum1').value, document.getElementById('txtNum2').value, document.getElementById('btnDivision').innerHTML)">Dividir</button>
+                </div>
+        </div>
+        <div class="col-sm-12 col-md-4 col-lg-4" action="">
+            <h5>Numeros y fechas</h5>
+            <button id="_Number" type="button" class="btn btn-primary mb-3"
+                onclick="objetos(document.getElementById('_Number').innerHTML)">Number</button>
+            <button id="_Math" type="button" class="btn btn-primary mb-3"
+                onclick="objetos(document.getElementById('_Math').innerHTML)">Math</button>
+            <button id="_Date" type="button" class="btn btn-primary mb-3"
+                onclick="objetos(document.getElementById('_Date').innerHTML)">Date</button>
+
+            <br><br>
+            <h5>Formateo de texto</h5>
+                <div class="mb-3">
+                    <textarea name="txa1" id="txa1" class="form-control" cols="30" rows="3"></textarea>
+                </div>
+                <div class="mb-3">
+                    <button id="btnMayuscula" type="button" class="btn btn-primary mb-3"
+                        onclick="formatearTexto(document.getElementById('btnMayuscula').innerHTML, document.getElementById('txa1').value, document.getElementById('txa1'))">Mayúscula</button>
+                    <button id="btnMinuscula" type="button" class="btn btn-primary mb-3"
+                        onclick="formatearTexto(document.getElementById('btnMinuscula').innerHTML, document.getElementById('txa1').value, document.getElementById('txa1'))">Minúscula</button>
+                    <button id="btnTamanio" type="button" class="btn btn-primary mb-3"
+                        onclick="formatearTexto(document.getElementById('btnTamanio').innerHTML, document.getElementById('txa1').value, document.getElementById('txa1'))">Tamaño</button>
+                </div>
+
+                <br><br>
+                <h5>Colecciones indexadas </h5>
+                <button type="button" class="btn btn-primary mb-3" onclick="array()">Frutas</button>
+                <button type="button" class="btn btn-primary mb-3" onclick="arrayTipado()">ArrayEntero8</button>
+        </div>
+
+    </div>
+</div>
+   
+<footer class="row">
+
+    <credit>&copy; Derechos Reservados <span id="year"></span></credit>
+    <div id="autor"></div>
+    <div id="date"></div>
+
+    <script>
+        document.getElementById("date").innerHTML = new Date().toDateString();
+        document.getElementById("year").innerHTML = new Date().getFullYear().toString();
+        document.getElementById('autor').innerHTML = "Valeria Barquero Chang";
+    </script>
+</footer>
+    
+    
+
+</body>
+</html>

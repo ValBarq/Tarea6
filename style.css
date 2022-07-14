@@ -1,0 +1,38 @@
+@font-face { 
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    src: url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+    src: url('https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed:wght@100&family=Lobster+Two&family=Montserrat:wght@200&family=Open+Sans:wght@300&display=swap');
+  }
+
+  *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  body{
+    background: #fbfaf8;
+    font-family: 'Montserrat', sans-serif;
+  }
+  header{
+      width: 100%;
+    background-image: linear-gradient(to right,#6c5e5e,  #949590);
+  }
+  header h2{
+      color: #F3F4F5;
+      font-size: 350% ;
+      font-family: 'Open Sans', sans-serif;
+  }
+
+  .row{padding: 1.2%;}
+  .row h5 {font-family: 'Open Sans', sans-serif;}
+
+  footer{
+    background-image: linear-gradient(to right,#6c5e5e,  #949590);
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: bold;
+    color: #F3F4F5;
+}
